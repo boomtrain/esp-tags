@@ -1,0 +1,42 @@
+{
+  "MailChimp": {
+    "email": "[~ SubscriberID ~]",
+    "timestamp": "%%$builtin.today%%"
+  },
+  "ConstantContact": {
+    "email": "Subscriber.Email"
+  },
+  "AWeber": {
+    "email": "{!name_fix}"
+  },
+  "GetResponse": {
+    "email": "{{CONTACT \"subscriber_name\"}}",
+    "timestamp": "{{DATE \"this email was sent on DAY_ORDINATED of MONTH_NAME, it was DAY_NAME\"}}"
+  },
+  "Bronto": {
+    "email": "(contact.getEmail())"
+  },
+  "Klaviyo": {
+    "email": "{{ email }}",
+    "timestamp": "{% current_weekday %}"
+  },
+  "ExactTarget": {
+    "email": "%%emailaddr%%",
+    "timestamp": "%%=Format(Now(), 'yyyyMMdd')=%%"
+  },
+  "Vero": {
+    "email": "{{ user.email | encode }}",
+    "timestamp": "{{ event.purchase_date | time_zone: 'Sydney' | date: '%d/%m/%Y %H:%M:%S %Z' }}"
+  },
+  "Stream Send": {
+    "email": "{{{owner_contact_email_address}}}"
+  },
+  "WhatCounts": {
+    "email": "%%STOP%%%%$email%%",
+    "timestamp": "%%$builtin.month_padded%%​_%%$builtin.day_padded%%_​%%$builtin.year%%​_%%$builtin.minutes%%_​%%$builtin.seconds%%"
+  },
+  "PostUp": {
+    "email": "[-emailaddr-]",
+    "timestamp": "[-TIMESTAMP-]"
+  }
+}
